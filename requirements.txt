@@ -1,4 +1,3 @@
 fastapi
-fastapi.middleware.cors
 uvicorn[standard]
 ytmusicapi
