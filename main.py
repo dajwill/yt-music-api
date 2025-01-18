@@ -18,8 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ytmusic = YTMusic()
-ytmusic = YTMusic("oauth.json")
+ytmusic = YTMusic()
+# ytmusic = YTMusic("oauth.json")
 
 @app.get("/")
 async def read_root():
