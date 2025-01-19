@@ -1,3 +1,4 @@
 fastapi
+fastapi-utilities
 uvicorn[standard]
-ytmusicapi
+ytmusicapi==1.9.0

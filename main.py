@@ -2,8 +2,15 @@ from typing import Union
 from ytmusicapi import YTMusic
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
+from cron import ping
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await ping()
+    yield
+
+app = FastAPI(lifespan=lifespan)
 
 origins = [
     "http://localhost",
