@@ -53,3 +53,7 @@ def read_song(video_id: str):
 @app.get("/album/{browse_id}")
 def get_album(browse_id: str):
     return ytmusic.get_album(browse_id)
+
+@app.get('/ping')
+def api_ping():
+    return {"message": "Hello World"}
