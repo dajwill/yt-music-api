@@ -10,7 +10,7 @@ async def lifespan(app: FastAPI):
     await ping()
     yield
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 
 origins = [
     "http://localhost",
