@@ -15,7 +15,7 @@ app = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:3000",
-    'https://yt-music-group-session.netlify.app/',
+    'https://yt-music-group-session.netlify.app',
 ]
 
 app.add_middleware(
